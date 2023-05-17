@@ -1,0 +1,34 @@
+.footer-developer {
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: $gray;
+}
+
+.footer-developer__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: inherit;
+
+  &:focus,
+  &:hover {
+    color: $primary;
+
+    & .footer-developer__icon {
+      fill: $primary;
+    }
+  }
+
+  &:active {
+    color: $primary-dark;
+
+    & .footer-developer__icon {
+      fill: $primary-dark;
+    }
+  }
+}
+
+.footer-developer__icon {
+  fill: $gray;
+}

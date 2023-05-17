@@ -1,0 +1,39 @@
+.features-list {
+  @media (min-width: $tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 50px 30px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  @media (min-width: $desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0;
+  }
+}
+
+.features-list__item {
+  margin-bottom: 32px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $tablet) {
+    max-width: 339px;
+    margin-bottom: 0;
+    text-align: left;
+
+    &::before {
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+
+    @media (min-width: $desktop) {
+      max-width: 317px;
+      text-align: inherit;
+    }
+  }
+}

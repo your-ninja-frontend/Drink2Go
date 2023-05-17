@@ -1,0 +1,13 @@
+.pagination {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.pagination__item {
+  @media (min-width: $tablet) {
+    &:first-child {
+      margin-left: auto;
+    }
+  }
+}

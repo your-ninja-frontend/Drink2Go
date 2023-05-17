@@ -1,0 +1,27 @@
+.button-menu {
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: none;
+  background-color: $white;
+  background-image: url("/img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+
+  &:active {
+    background-color: $secondary;
+  }
+
+  &--close {
+    background-image: url("/img/icon-close.svg");
+  }
+
+  &--no-js {
+    display: none;
+  }
+}

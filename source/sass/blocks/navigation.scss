@@ -1,0 +1,25 @@
+.navigation {
+  display: flex;
+
+  @media (min-width: $tablet) {
+    align-items: flex-start;
+  }
+}
+
+.navigation__button-menu {
+  order: 1;
+}
+
+.navigation__list {
+  @media (min-width: $desktop) {
+    gap: 20px;
+  }
+}
+
+.navigation__list-user {
+  flex-shrink: 0;
+
+  @media (min-width: $tablet) {
+    margin-left: auto;
+  }
+}

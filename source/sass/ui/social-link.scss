@@ -1,0 +1,31 @@
+.social-link {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 4px;
+
+  &--pinterest {
+    padding: 9px;
+  }
+
+  &:focus,
+  &:hover,
+  &:active {
+    & .social-link__icon {
+      fill: $primary;
+    }
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:active {
+    background-color: $primary-opacity;
+  }
+}
+
+.social-link__icon {
+  fill: $gray;
+}

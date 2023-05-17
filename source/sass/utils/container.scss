@@ -1,0 +1,11 @@
+.container {
+  width: 100%;
+  min-width: $mobail;
+  max-width: $desktop;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media (min-width: $desktop) {
+    padding: 0 40px;
+  }
+}

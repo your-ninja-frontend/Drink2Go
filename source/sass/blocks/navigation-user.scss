@@ -1,0 +1,57 @@
+.navigation-user {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 180px;
+
+  @media (max-width: $mobail-max) {
+    &--no-js {
+      position: absolute;
+      top: 0;
+      right: 0;
+      max-width: 240px;
+      max-height: 60px;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    max-width: 261px;
+  }
+}
+
+.navigation-user__link {
+  display: flex;
+  align-items: center;
+  width: 60px;
+  padding: 22px;
+
+  &:active {
+    background-color: $secondary;
+  }
+
+  @media (min-width: $tablet) {
+    flex-direction: row;
+    padding: 32px 22px;
+  }
+
+  @media (min-width: $desktop) {
+    gap: 8px;
+    width: auto;
+    padding: 32px 20px;
+
+    &:focus .navigation-user__icon,
+    &:hover .navigation-user__icon,
+    &:active .navigation-user__icon {
+      fill: $primary;
+    }
+  }
+}
+
+.navigation-user__link-text {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}

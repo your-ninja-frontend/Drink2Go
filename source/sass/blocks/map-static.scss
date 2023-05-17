@@ -1,0 +1,22 @@
+.map-static {
+  display: none;
+}
+
+.map-static--no-js {
+  display: block;
+}
+
+.map-static__img {
+  width: $mobail;
+  margin: 0 auto;
+
+  @media (min-width: $tablet) {
+    width: $tablet;
+    height: 480px;
+  }
+
+  @media (min-width: $desktop) {
+    width: $desktop;
+    height: 540px;
+  }
+}

@@ -1,0 +1,116 @@
+.range {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  overflow: hidden;
+}
+
+.range__bar {
+  width: 280px;
+  height: 2px;
+  background-color: $gray-light;
+
+  @media (min-width: $tablet) {
+    width: 223px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 318px;
+  }
+}
+
+.range__toggle {
+  position: relative;
+  z-index: 1;
+  top: -11px;
+  display: block;
+  cursor: pointer;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  &::before {
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 24px;
+    border: 2px solid $primary-light;
+    background-color: $white;
+  }
+
+  &::after {
+    top: 4px;
+    left: 4px;
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.range__toggle--right {
+  left: 236px;
+
+  @media (min-width: $tablet) {
+    left: 179px;
+  }
+
+  @media (min-width: $desktop) {
+    left: 274px;
+  }
+}
+
+.range__toggle:focus,
+.range__toggle:hover {
+  &::after {
+    background-color: $primary-opacity;
+  }
+}
+
+.range__toggle:active {
+  &::before {
+    border-color: $primary;
+  }
+
+  &::after {
+    background-color: $primary;
+  }
+}
+
+.range__line {
+  position: absolute;
+  top: 10px;
+  width: 242px;
+  height: 4px;
+  background-color: $primary-light;
+
+  @media (min-width: $tablet) {
+    width: 192px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 274px;
+  }
+}
+
+.range--disabled {
+  & .range__line {
+    background-color: $gray;
+  }
+
+  & .range__toggle,
+  & .range__toggle:focus,
+  & .range__toggle:hover,
+  & .range__toggle:active {
+    &::before {
+      border-color: $gray;
+    }
+
+    &::after {
+      background-color: $white;
+    }
+  }
+}

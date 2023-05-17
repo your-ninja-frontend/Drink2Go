@@ -1,1 +1,44 @@
 /* здесь используйте глобальные селекторы img, body, html и так далее*/
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+  margin: 0;
+  font-family: $font-montserrat;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: $black;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Только обнуление */
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+fieldset {
+  border: none;
+}

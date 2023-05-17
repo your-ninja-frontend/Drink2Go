@@ -1,0 +1,70 @@
+.feature {
+  &::before {
+    content: "";
+    display: block;
+    width: 52px;
+    height: 56px;
+    margin: 0 auto 10px;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &--speed {
+    &::before {
+      background-image: url("/img/features-icon-speed.svg");
+    }
+  }
+
+  &--comfort {
+    &::before {
+      background-image: url("/img/features-icon-comfort.svg");
+    }
+  }
+
+  &--energy {
+    &::before {
+      background-image: url("/img/features-icon-energy.svg");
+    }
+  }
+
+  &--ecology {
+    &::before {
+      background-image: url("/img/features-icon-ecology.svg");
+    }
+  }
+
+  @media (min-width: $tablet) {
+    display: flex;
+    gap: 20px;
+
+    &::before {
+      flex-shrink: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop) {
+    flex-direction: column;
+  }
+}
+
+.feature__subtitle {
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  word-break: break-all;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 10px;
+    font-size: 24px;
+    line-height: 36px;
+  }
+}
+
+.feature__description {
+  @media (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,101 @@
+.pagination-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  min-width: 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 24px;
+  background-color: $white;
+  color: $primary;
+  text-decoration: none;
+
+  &:focus,
+  &:hover,
+  &:active {
+    color: $white;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $primary-light;
+  }
+
+  &:active {
+    background-color: $primary-dark;
+  }
+
+  &--active,
+  &--disabled {
+    cursor: auto;
+  }
+
+  &--active {
+    font-weight: 600;
+    background-color: transparent;
+    color: $black;
+
+    &:focus,
+    &:hover,
+    &:active {
+      background-color: transparent;
+      color: $black;
+    }
+  }
+
+  &--disabled {
+    & .pagination__img {
+      fill: $white;
+    }
+  }
+
+  &--disabled,
+  &--disabled:focus,
+  &--disabled:hover {
+    background-color: $gray-light;
+    color: $white;
+  }
+}
+
+.pagination-button--disabled .pagination-button__icon {
+  fill: $white;
+}
+
+.pagination-button--back,
+.pagination-button--next {
+  min-height: 40px;
+
+  &:focus,
+  &:hover,
+  &:active {
+    & .pagination-button__icon {
+      fill: $white;
+    }
+  }
+
+  @media (min-width: $tablet) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+.pagination-button__icon {
+  fill: $primary;
+
+  @media (min-width: $tablet) {
+    display: none;
+  }
+}
+
+.pagination-button__icon--next {
+  transform: rotate(180deg);
+}
+
+.pagination-button__text {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}

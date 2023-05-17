@@ -1,0 +1,15 @@
+.logo__img {
+  @media (min-width: $tablet) {
+    width: 83px;
+  }
+
+  @media (min-width: $desktop) {
+    width: 170px;
+  }
+}
+
+.logo__img-footer {
+  @media (min-width: $tablet) {
+    width: 170px;
+  }
+}

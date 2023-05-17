@@ -1,0 +1,94 @@
+.sorting {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  @media (min-width: $tablet) {
+    gap: 10px;
+  }
+}
+
+.sorting__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.sorting__button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 10px;
+  background-color: transparent;
+  border: none;
+  border-radius: 4px;
+  text-transform: lowercase;
+  font-family: $font-montserrat;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: $primary;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 6px;
+    background-image: url("/img/sorting-arrow.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: $secondary;
+  }
+
+  &:active {
+    background-color: transparent;
+  }
+}
+
+.sorting__list {
+  display: none;
+  border-radius: 4px;
+  background-color: $white;
+  box-shadow: $sorting-shadow;
+  overflow: hidden;
+}
+
+.sorting__list--active {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 42px;
+}
+
+.sorting__item {
+  margin-bottom: 1px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.sorting__link {
+  display: block;
+  padding: 8px 20px;
+  text-transform: lowercase;
+  font-size: 16px;
+  line-height: 24px;
+  color: $black;
+
+  &:focus:not(.sorting__link--active),
+  &:hover:not(.sorting__link--active) {
+    background-color: $secondary;
+  }
+}
+
+.sorting__link--active {
+  color: $white;
+  background-color: $primary;
+}

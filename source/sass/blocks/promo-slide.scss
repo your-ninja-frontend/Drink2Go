@@ -1,0 +1,139 @@
+.promo-slide {
+  display: flex;
+  background-color: $white;
+  cursor: pointer;
+
+  @media (min-width: $desktop) {
+    &--1 {
+      background-color: $flat-white;
+    }
+
+    &--2 {
+      background-color: $lavender-latte;
+    }
+
+    &--3 {
+      background-color: $espresso;
+    }
+  }
+}
+
+.promo-slide__container {
+  text-align: center;
+  padding: 20px 20px 60px;
+
+  &--1 {
+    background-color: $flat-white;
+  }
+
+  &--2 {
+    background-color: $lavender-latte;
+  }
+
+  &--3 {
+    background-color: $espresso;
+  }
+
+  @media (min-width: $tablet) {
+    margin-bottom: 188px;
+    padding: 60px 79px 308px;
+  }
+
+  @media (min-width: $desktop) {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 0;
+    padding: 30px 80px 84px 105px;
+    text-align: left;
+  }
+}
+
+.promo-slide__left-column {
+  flex-shrink: 0;
+}
+
+.promo-slide__right-column {
+  @media (min-width: $desktop) {
+    margin-top: 150px;
+  }
+}
+
+.promo-slide__img {
+  margin: 0 auto 10px;
+
+  @media (min-width: $tablet) {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 476px;
+    height: 476px;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop) {
+    position: static;
+    transform: none;
+    width: 600px;
+    height: 600px;
+  }
+}
+
+.promo-slide__badge {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.promo-slide__title {
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+
+  @media (min-width: $tablet) {
+    margin-bottom: 16px;
+    font-size: 56px;
+    line-height: 80px;
+  }
+}
+
+.promo-slide__description {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet) {
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: $desktop) {
+    margin-bottom: 40px;
+  }
+}
+
+.promo-slide__description-br {
+  display: none;
+
+  @media (min-width: $tablet) {
+    display: block;
+  }
+}
+
+.promo-slide__inner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (min-width: $desktop) {
+    justify-content: flex-start;
+  }
+}
+
+.promo-slide__price-old {
+  margin-right: 6px;
+}
+
+.promo-slide__button {
+  margin-left: 20px;
+}

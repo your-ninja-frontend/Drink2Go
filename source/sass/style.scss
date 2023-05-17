@@ -1,7 +1,51 @@
 /* GLOBAL */
 @import "global/variables";
+@import "global/colors";
 @import "global/global";
 @import "global/fonts";
 
+/* UTILS */
+@import "utils/container";
+@import "utils/visually-hidden";
+
+/* UI */
+@import "ui/link";
+@import "ui/button-menu";
+@import "ui/button";
+@import "ui/price";
+@import "ui/badge";
+@import "ui/input";
+@import "ui/input-checkbox";
+@import "ui/input-radio";
+@import "ui/pagination-button";
+@import "ui/social-link";
+@import "ui/line";
+
+/* COMPONENTS */
+@import "components/swiper";
+
 /* BLOCKS */
 @import "blocks/header";
+@import "blocks/logo";
+@import "blocks/navigation";
+@import "blocks/navigation-main";
+@import "blocks/navigation-user";
+@import "blocks/promo-slider";
+@import "blocks/promo-slide";
+@import "blocks/features";
+@import "blocks/features-list";
+@import "blocks/feature";
+@import "blocks/catalog";
+@import "blocks/filter";
+@import "blocks/range";
+@import "blocks/products";
+@import "blocks/sorting";
+@import "blocks/products-list";
+@import "blocks/product-card";
+@import "blocks/pagination";
+@import "blocks/map";
+@import "blocks/map-static";
+@import "blocks/footer";
+@import "blocks/social-list";
+@import "blocks/navigation-footer";
+@import "blocks/footer-developer";
