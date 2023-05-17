@@ -120,6 +120,14 @@
   }
 }
 
+.promo-slide__description-br--desktop {
+  display: none;
+
+  @media (min-width: $desktop) {
+    display: block;
+  }
+}
+
 .promo-slide__inner-wrapper {
   display: flex;
   align-items: center;
