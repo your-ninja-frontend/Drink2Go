@@ -13,6 +13,7 @@
 
 .header__logo {
   flex-shrink: 0;
+  display: block;
   width: max-content;
 
   @media (max-width: $mobail-max) {
